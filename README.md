@@ -10,10 +10,6 @@
 * RSpec
   * FactoryBot
   * Faker
-* Skip
-  * JBuilder
-  * ActionMailbox
-  * Kamal
 * SolidQueue
   * Setup in dev
   * mission_control-jobs

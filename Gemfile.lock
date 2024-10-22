@@ -72,6 +72,7 @@ GEM
       securerandom (>= 0.3)
       tzinfo (~> 2.0, >= 2.0.5)
       uri (>= 0.13.1)
+    ar_lazy_preload (2.1.0)
     ast (2.4.2)
     base64 (0.2.0)
     benchmark (0.3.0)
@@ -335,6 +336,7 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
+  ar_lazy_preload
   bootsnap
   brakeman
   debug
