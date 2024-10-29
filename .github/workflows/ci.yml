@@ -69,33 +69,32 @@ jobs:
         run: bin/rspec
 
   build:
-    build-and-push-image:
-      runs-on: ubuntu-latest
-      if: ${{ always() && contains(join(needs.*.result, ','), 'success') }}
-      needs: [test, lint, scan_ruby, scan_js]
-      permissions:
-        contents: read
-        packages: write
+    runs-on: ubuntu-latest
+    if: ${{ always() && contains(join(needs.*.result, ','), 'success') }}
+    needs: [test, lint, scan_ruby, scan_js]
+    permissions:
+      contents: read
+      packages: write
 
-      steps:
-        - name: Checkout repository
-          uses: actions/checkout@v4
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-        - name: Log in to the Container registry
-          uses: docker/login-action@v1
-          with:
-            registry: ${{ env.REGISTRY }}
-            username: ${{ github.actor }}
-            password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Log in to the Container registry
+        uses: docker/login-action@v1
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
-        - id: lower-repo
-          shell: pwsh
-          run: |
-            "::set-output name=repository::$($env:GITHUB_REPOSITORY.ToLowerInvariant())"
+      - id: lower-repo
+        shell: pwsh
+        run: |
+          "::set-output name=repository::$($env:GITHUB_REPOSITORY.ToLowerInvariant())"
 
-        - name: Build and push Docker image
-          uses: docker/build-push-action@v2
-          with:
-            context: .
-            push: true
-            tags: ${{ env.REGISTRY }}/${{ steps.lower-repo.outputs.repository }}:latest
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          push: true
+          tags: ${{ env.REGISTRY }}/${{ steps.lower-repo.outputs.repository }}:latest
