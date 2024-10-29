@@ -1,5 +1,5 @@
 {
-  "name": "RailsTemplateApp",
+  "name": "<%=Rails.app_class.name.split('::').first %>",
   "icons": [
     {
       "src": "/icon.png",
@@ -16,7 +16,7 @@
   "start_url": "/",
   "display": "standalone",
   "scope": "/",
-  "description": "RailsTemplateApp.",
+  "description": "<%=Rails.app_class.name.split('::').first %>",
   "theme_color": "red",
   "background_color": "red"
 }
