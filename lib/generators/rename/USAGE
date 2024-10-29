@@ -1,0 +1,5 @@
+Description:
+    Will rename the app and reset credentials
+
+Example:
+    bin/rails generate rename NewAwesomeApp
