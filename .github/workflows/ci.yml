@@ -64,7 +64,7 @@ jobs:
         with:
           ruby-version: .ruby-version
           bundler-cache: true
-
+      - run: bin/rails assets:precompile
       - name: Run tests
         run: bin/rspec
 
