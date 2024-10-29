@@ -14,4 +14,8 @@ class RenameGenerator < Rails::Generators::NamedBase
   def rename_app
     gsub_file('config/application.rb', 'RailsTemplateApp', class_name)
   end
+
+  def remove_this_generator
+    remove_dir('lib/generators/rename')
+  end
 end
