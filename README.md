@@ -1,5 +1,16 @@
 # Rails Template App
 
+## Usage
+
+```bash
+curl -sL https://github.com/Bhacaz/rails_template_app/archive/main.tar.gz | tar xz
+mv rails_template_app-main my_awesome_app
+cd my_awesome_app
+bundle install
+bin/rails generate rename MyAwesomeApp
+bin/setup
+```
+
 ## Features
 
 * Rails 8.0.0.beta1
