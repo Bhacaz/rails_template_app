@@ -11,3 +11,7 @@ AllCops:
 
 Style/Documentation:
   Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Exclude:
+    - app/views/**/*
