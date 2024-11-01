@@ -3,13 +3,7 @@
 ## Usage
 
 ```bash
-curl -sL https://github.com/Bhacaz/rails_template_app/archive/main.tar.gz | tar xz
-mv rails_template_app-main my_awesome_app
-cd my_awesome_app
-rbenv local $(cat .ruby-version)
-bundle install
-bin/rails generate rename MyAwesomeApp
-bin/setup
+curl -s https://raw.githubusercontent.com/Bhacaz/rails_template_app/refs/heads/main/setup.sh | bash -s my_new_app
 ```
 
 ## Features
