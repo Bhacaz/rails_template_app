@@ -13,4 +13,5 @@ cd $APP_NAME
 rbenv local $(cat .ruby-version)
 bundle install
 bin/rails generate rename $APP_NAME
+git init && git add . && git commit -m "Initial commit"
 bin/setup

@@ -15,6 +15,11 @@ class RenameGenerator < Rails::Generators::NamedBase
     gsub_file('config/application.rb', 'RailsTemplateApp', class_name)
   end
 
+  def replace_readme
+    remove_file('README.md')
+    create_file('README.md', "# #{class_name}")
+  end
+
   def remove_this_generator
     remove_dir('lib/generators/rename')
   end
