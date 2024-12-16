@@ -17,6 +17,10 @@ default_queue: &default_queue
   <<: *default
   migrations_paths: db/queue_migrate
 
+default_cable: &default_cable
+  <<: *default
+  migrations_paths: db/cable_migrate
+
 development:
   primary:
     <<: *default
@@ -27,6 +31,9 @@ development:
   queue:
     <<: *default_queue
     database: storage/development_queue.sqlite3
+  cable:
+    <<: *default_cable
+    database: storage/development_cable.sqlite3
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -55,3 +62,6 @@ production:
   queue:
     <<: *default_queue
     database: storage/production_queue.sqlite3
+  cable:
+    <<: *default_cable
+    database: storage/production_cable.sqlite3
