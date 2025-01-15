@@ -52,7 +52,7 @@ group :development, :test do
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
   gem 'brakeman', require: false
 
-  gem 'hotwire-livereload'
+  gem 'hotwire-spark'
 
   gem 'rubocop', require: false
   gem 'rubocop-erb', require: false
