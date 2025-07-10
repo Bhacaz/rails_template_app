@@ -2,3 +2,7 @@
 @plugin "./daisyui.js" {
     themes: night --default, night --prefersdark;
 }
+
+/* @plugin "./daisyui-theme.js"{ */
+  /* custom theme here */
+/* } */
