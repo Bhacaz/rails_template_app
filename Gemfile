@@ -73,3 +73,5 @@ group :test do
   gem 'faker'
   gem 'rspec-rails'
 end
+
+gem "solid_apm", "~> 0.9.0"

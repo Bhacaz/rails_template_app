@@ -21,6 +21,10 @@ default_cable: &default_cable
   <<: *default
   migrations_paths: db/cable_migrate
 
+defaulf_solid_apm: &default_solid_apm
+  <<: *default
+  migrations_paths: db/solid_apm_migrate
+
 development:
   primary:
     <<: *default
@@ -34,6 +38,9 @@ development:
   cable:
     <<: *default_cable
     database: storage/development_cable.sqlite3
+  solid_apm:
+    <<: *default_solid_apm
+    database: storage/development_solid_apm.sqlite3
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -65,3 +72,6 @@ production:
   cable:
     <<: *default_cable
     database: storage/production_cable.sqlite3
+  solid_apm:
+    <<: *default_solid_apm
+    database: storage/production_solid_apm.sqlite3

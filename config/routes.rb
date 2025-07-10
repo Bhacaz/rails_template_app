@@ -16,5 +16,6 @@ Rails.application.routes.draw do
 
   scope '/admin' do
     mount SolidQueueDashboard::Engine, at: '/jobs'
+    mount SolidApm::Engine, at: '/apm'
   end
 end
