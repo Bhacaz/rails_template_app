@@ -114,6 +114,7 @@ GEM
       railties (>= 6.1.0)
     faker (3.5.2)
       i18n (>= 1.8.11, < 2)
+    ffi (1.17.2)
     ffi (1.17.2-aarch64-linux-gnu)
     ffi (1.17.2-aarch64-linux-musl)
     ffi (1.17.2-arm-linux-gnu)
@@ -164,7 +165,8 @@ GEM
     marcel (1.0.4)
     mini_mime (1.1.5)
     mini_portile2 (2.8.9)
-    minitest (5.25.5)
+    minitest (6.0.1)
+      prism (~> 1.5)
     msgpack (1.8.0)
     net-imap (0.5.9)
       date
@@ -202,7 +204,7 @@ GEM
     pp (0.6.2)
       prettyprint
     prettyprint (0.2.0)
-    prism (1.4.0)
+    prism (1.8.0)
     propshaft (1.2.1)
       actionpack (>= 7.0.0)
       activesupport (>= 7.0.0)
@@ -348,6 +350,8 @@ GEM
       chartkick (>= 5.0)
       groupdate (>= 6.5)
       solid_queue (>= 1.0.0)
+    sqlite3 (2.7.3)
+      mini_portile2 (~> 2.8.0)
     sqlite3 (2.7.3-aarch64-linux-gnu)
     sqlite3 (2.7.3-aarch64-linux-musl)
     sqlite3 (2.7.3-arm-linux-gnu)
@@ -385,7 +389,7 @@ GEM
       concurrent-ruby (~> 1.0)
     unicode-display_width (3.1.5)
       unicode-emoji (~> 4.0, >= 4.0.4)
-    unicode-emoji (4.0.4)
+    unicode-emoji (4.2.0)
     uri (1.0.3)
     useragent (0.16.11)
     web-console (4.2.1)
@@ -449,4 +453,4 @@ DEPENDENCIES
   web-console
 
 BUNDLED WITH
-   2.5.10
+  4.0.3
