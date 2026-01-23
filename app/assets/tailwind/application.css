@@ -1,8 +1,8 @@
 @import "tailwindcss";
-@plugin "./daisyui.js" {
+@plugin "./daisyui.mjs" {
     themes: night --default, night --prefersdark;
 }
 
-/* @plugin "./daisyui-theme.js"{ */
+/* @plugin "./daisyui-theme.mjs"{ */
   /* custom theme here */
 /* } */
